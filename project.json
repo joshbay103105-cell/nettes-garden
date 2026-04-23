@@ -1,0 +1,23 @@
+{
+  "overview": "Green Harvest Farm is a modern, responsive marketing website for a sustainable farm business. It features a hero section, education programs, byproduct showcase, achievements, testimonials, team profiles, and a contact form — all styled with earthy greens, browns, and beiges.",
+  "features": [
+    "Hero section with 'Growing Fresh, Sustainable, and Smart' tagline and CTA buttons",
+    "Education section with workshops, farming guides, and school partnerships",
+    "Byproducts showcase with organic fertilizers, compost, milk, and eggs",
+    "Achievements section with awards, certifications, and community stats",
+    "Testimonials from customers and students",
+    "About Us with farm story, mission/vision, and team profiles",
+    "Contact form with validation and social media links",
+    "Mobile-responsive earthy design with smooth animations"
+  ],
+  "category": "showcase",
+  "tags": [
+    "farm",
+    "agriculture",
+    "sustainability",
+    "marketing",
+    "responsive",
+    "earthy-design"
+  ],
+  "last_updated": "2026-04-23T18:30:20.785Z"
+}

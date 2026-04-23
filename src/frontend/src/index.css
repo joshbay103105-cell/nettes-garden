@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-display: "Fraunces";
+    --font-body: "DM Sans";
+    --font-mono: monospace;
+    --radius: 0.625rem;
+
+    /* Cream background */
+    --background: 0.96 0.015 75;
+    --foreground: 0.2 0.03 50;
+    --card: 0.99 0.008 75;
+    --card-foreground: 0.2 0.03 50;
+    --popover: 0.99 0.008 75;
+    --popover-foreground: 0.2 0.03 50;
+
+    /* Forest green primary */
+    --primary: 0.42 0.13 152;
+    --primary-foreground: 0.97 0.008 75;
+
+    /* Warm beige secondary */
+    --secondary: 0.92 0.025 75;
+    --secondary-foreground: 0.3 0.04 50;
+    --muted: 0.93 0.018 75;
+    --muted-foreground: 0.52 0.025 55;
+
+    /* Warm gold accent */
+    --accent: 0.72 0.13 85;
+    --accent-foreground: 0.18 0.03 50;
+
+    --destructive: 0.5 0.2 25;
+    --destructive-foreground: 0.96 0.01 25;
+
+    --border: 0.88 0.022 75;
+    --input: 0.88 0.022 75;
+    --ring: 0.42 0.13 152;
+
+    --chart-1: 0.55 0.18 150;
+    --chart-2: 0.42 0.13 152;
+    --chart-3: 0.72 0.13 85;
+    --chart-4: 0.65 0.16 70;
+    --chart-5: 0.72 0.15 45;
+
+    --sidebar: 0.98 0.01 75;
+    --sidebar-foreground: 0.2 0.03 50;
+    --sidebar-primary: 0.42 0.13 152;
+    --sidebar-primary-foreground: 0.97 0.008 75;
+    --sidebar-accent: 0.92 0.025 75;
+    --sidebar-accent-foreground: 0.3 0.04 50;
+    --sidebar-border: 0.88 0.022 75;
+    --sidebar-ring: 0.42 0.13 152;
+  }
+
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .fade-in {
+    animation: fade-in 0.7s ease-out forwards;
+  }
+
+  .slide-up {
+    animation: slide-up 0.7s ease-out forwards;
+  }
+
+  .slide-left {
+    animation: slide-left 0.7s ease-out forwards;
+  }
+
+  .hover-lift {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s
+      cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 32px oklch(0 0 0 / 0.12);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .section-divider {
+    @apply w-16 h-1 rounded-full bg-accent;
+  }
+
+  .animate-delayed-1 {
+    animation-delay: 0.1s;
+  }
+  .animate-delayed-2 {
+    animation-delay: 0.2s;
+  }
+  .animate-delayed-3 {
+    animation-delay: 0.3s;
+  }
+  .animate-delayed-4 {
+    animation-delay: 0.4s;
+  }
+  .animate-delayed-5 {
+    animation-delay: 0.5s;
+  }
+
+  .opacity-0-initial {
+    opacity: 0;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-left {
+    from {
+      opacity: 0;
+      transform: translateX(-24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("https://fonts.gstatic.com/s/fraunces/v31/6NUh8FyLNQOQZAnv9bYEvDiIdE9Ea92uemAk_WBoDMnGLL9e.woff2")
+    format("woff2");
+  font-display: swap;
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("https://fonts.gstatic.com/s/dmsans/v15/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K4.woff2")
+    format("woff2");
+  font-display: swap;
+  font-weight: 300 700;
+  font-style: normal;
+}
